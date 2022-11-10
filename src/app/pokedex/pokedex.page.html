@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pokedex</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Nombre de pokemons : {{ NbPokemons }}</h1>
+
+  <ion-card *ngFor="let p of PokedexNational">
+    <img alt={{p.name}} src={{p.sprite}} />
+    <ion-card-header>
+      <ion-card-title>{{p.name}}</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-button shape="round" *ngFor="let t of p.types">{{t.name}}</ion-button>
+    </ion-card-content>
+  </ion-card> 
+
+</ion-content>
